@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html id="home" lang="en">
+
+    <head>
+        <title>Talkingo Group Chat | Hangout</title>
+
+        <script>
+            if(!location.hash.replace('#', '').length) {
+                location.href = location.href.split('#')[0] + '#' + (Math.random() * 100).toString().replace('.', '');
+                location.reload();
+            }
+        </script>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            document.createElement('article');
+            document.createElement('footer');
+        </script>
+    </head>
+
+    <body style="background-color: black;">
+
+            <header>
+                    <div class="container">
+                        <div id="branding">
+                            
+                           <h1><span class="highlight">Talkingo Hangouts</h1>
+                        </div>
+                    <nav>
+                         <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="index.html">Video Conferencing</a></li>
+                             <li class="current"><a href="chat.html">Talkingo Chat</a></li>
+                             <li><a href="screen.html">Screen Sharing</a></li>
+                             <li><a href="broadcast.html">Talkingo Live</a></li>
+                             <li><a href="about.html">About</a></li>
+
+                         </ul>               
+                    </nav>
+                    </div>
+                </header>
+        <article class="section1">
+
+
+            <section class="experiment">
+
+                <!-- <HTML code for you> ::: just copy this section! -->
+                <table class="visible">
+                    <tr>
+                        <td style="text-align: right;width: 50%!important;">
+                            <input type="text" id="conference-name" placeholder="Hangout Name...">
+                        </td>
+
+                        <td style="width: 50%!important;">
+                            <button id="start-conferencing" href="#">Start Chat-Hangout</button>
+                        </td>
+                    </tr>
+                </table>
+
+                <table id="rooms-list" class="visible"></table>
+
+                <table class="visible">
+                    <tr>
+                        <td style="text-align: center;">
+                            <strong>Private chat-hangout</strong> ?? <a href="" target="_blank"
+                                                                        title="Open this link in new tab. Then your chat-hangout room will be private!"><code><strong
+                                                                                                                                                                  id="unique-token">#123456789</strong></code></a>
+                        </td>
+                    </tr>
+                </table>
+
+                <table id="chat-table" class="center-table hidden">
+                    <tr>
+                        <td style="text-align: center;">
+                            <input type="text" id="chat-message" disabled>
+                            <button id="post-chat-message" >Post Message</button>
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <br/>
+                <br/>
+                <table id="chat-output" class="hidden"></table>
+
+                <br/>
+                <br/>
+
+            </section>
+
+            <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+            <script src="https://www.webrtc-experiment.com/socket.io.js"> </script>
+            <script src="https://www.webrtc-experiment.com/RTCPeerConnection-v1.5.js"> </script>
+            <script src="https://www.webrtc-experiment.com/chat-hangout/hangout.js"> </script>
+            <script src="https://www.webrtc-experiment.com/chat-hangout/hangout-ui.js"> </script>
+
+            <!-- </HTML code for you> ::: end copy this section! -->
+
+            <section style="border: 1px solid rgb(189, 189, 189); border-radius: .2em; margin: 1em 3em;">
+                <h2 id="feedback" style="border-bottom: 1px solid rgb(189, 189, 189); padding: .2em .4em;">Feedback</h2>
+
+                <div>
+                    <textarea id="message"
+                              style="border: 1px solid rgb(255, 255, 255); height: 8em; margin: .2em; outline: none; resize: vertical; width: 98%;"
+                              placeholder="Have any message? Suggestions or something went wrong?"></textarea>
+                </div>
+                <button id="send-message" style="font-size: 1em;">Send Message</button>
+            </section>
+
+        </article>
+
+
+        <!-- commits.js is useless for you! -->
+        <script src="https://www.webrtc-experiment.com/commits.js" async> </script>
+    </body>
+</html>
